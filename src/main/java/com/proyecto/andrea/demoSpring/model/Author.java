@@ -23,6 +23,7 @@ public class Author {
     @Column(name = "pseudonym")
     private String pseudonym;
 
+    @JsonIgnoreProperties(value = "authors")
     @ManyToMany (cascade = CascadeType.MERGE)
     @JoinTable
     private List<Book> books;

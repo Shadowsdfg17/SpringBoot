@@ -26,6 +26,7 @@ public class Book {
     @Column(name = "editorial", nullable = false)
     private String editorial;
 
+    @JsonIgnoreProperties(value = "books")
     @ManyToMany (mappedBy = "books")
     private List<Author> authors;
 
